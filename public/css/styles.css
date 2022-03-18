@@ -15,8 +15,9 @@
 
 body {
    font-family: 'Roboto', sans-serif;
-   background-color: var(--amarillo);
    font-size: var(--cuerpo-texto);
+   margin: 0;
+   background-color: var(--gris-claro);
 }
 
 ul,
@@ -28,6 +29,11 @@ ol {
 a {
    color: #000;
    text-decoration: none;
+}
+
+header {
+   background-color: var(--amarillo);
+   padding: 0.5rem;
 }
 
 .logo-principal {
@@ -50,4 +56,44 @@ a {
 
 .menu-icono {
    font-size: 1.5rem;
+}
+
+footer {
+   background-color: #fff;
+   margin: 0.5rem;
+   padding: 3rem 1rem 1rem;
+}
+
+footer section {
+   text-align: center;
+   margin-bottom: 2rem;
+}
+
+footer h3 {
+   font-size: 1rem;
+   color: var(--gris-oscuro);
+   margin: 0;
+   font-weight: 900;
+}
+footer p {
+   margin: 0 auto;
+   color: var(--gris-oscuro);
+   width: 90%;
+   max-width: 350px;
+}
+
+footer section i {
+   color: var(--celeste);
+   font-size: 2rem;
+   margin-bottom: 10px;
+}
+
+section.copyright {
+   text-align: left;
+   padding: 0;
+   margin: 0;
+}
+section.copyright p {
+   text-align: left;
+   margin: 0;
 }
