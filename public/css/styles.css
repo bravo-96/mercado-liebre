@@ -1,0 +1,53 @@
+:root {
+   --amarillo: #eac926;
+   --azul: #03264c;
+   --celeste: #1259c3;
+   --gris-oscuro: #666;
+   --gris-claro: #ebebeb;
+   --verde: #39b54a;
+
+   --cuerpo-texto: 12px;
+   --titulares: 24px;
+   --precios: 18px;
+   --descuentos: 16px;
+   --descripciones: 16px;
+}
+
+body {
+   font-family: 'Roboto', sans-serif;
+   background-color: var(--amarillo);
+   font-size: var(--cuerpo-texto);
+}
+
+ul,
+ol {
+   list-style: none;
+   padding: 0;
+}
+
+a {
+   color: #000;
+   text-decoration: none;
+}
+
+.logo-principal {
+   width: 10rem;
+   margin: 2rem 0 1rem;
+}
+
+.coutas-p {
+   text-align: center;
+}
+
+.burger-menu {
+   background-color: var(--celeste);
+   color: #fff;
+   padding: 0.6rem;
+   margin: 0 auto;
+   width: max-content;
+   border-radius: 0.4rem;
+}
+
+.menu-icono {
+   font-size: 1.5rem;
+}
