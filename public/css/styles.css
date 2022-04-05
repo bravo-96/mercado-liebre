@@ -13,6 +13,16 @@
    --descripciones: 16px;
 }
 
+html {
+   box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+   box-sizing: inherit;
+}
+
 body {
    font-family: 'Roboto', sans-serif;
    font-size: var(--cuerpo-texto);
@@ -33,11 +43,22 @@ a {
 
 img {
    width: 100%;
+   margin: 0;
 }
 
 header {
    background-color: var(--amarillo);
-   padding: 1rem 0;
+   padding: 1rem 0 0;
+}
+
+header .logo-barra-busqueda-contenedor {
+   margin: 1rem auto 0;
+   max-width: 500px;
+   display: flex;
+   /* gap: 1rem; */
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
 }
 
 header nav {
@@ -45,15 +66,24 @@ header nav {
 }
 
 .logo-principal {
-   width: 8rem;
-   margin: 1rem 2rem;
+   width: 50%;
 }
 
 .barra-busqueda {
-   margin-left: 1rem;
+   width: 50%;
+   display: flex;
+}
+
+.barra-busqueda input {
+   padding: 0.3rem;
+   width: 80%;
+}
+.barra-busqueda button {
+   width: 20%;
 }
 
 .coutas-p {
+   width: 100%;
    text-align: center;
 }
 
@@ -61,7 +91,7 @@ header nav {
    background-color: var(--celeste);
    color: #fff;
    padding: 0.6rem;
-   margin: 0 auto;
+   margin: 0 auto 1rem;
    width: max-content;
    border-radius: 0.4rem;
 }
@@ -70,26 +100,50 @@ header nav {
    font-size: 1.5rem;
 }
 
+header > img {
+   display: block;
+}
+
 main {
    width: 90%;
    margin: 0 auto;
 }
 
+main section .productos {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   gap: 1rem;
+}
+
+main > section h3 {
+   width: 100%;
+}
+
 main article.card {
    margin-bottom: 10px;
    background-color: #fff;
+
+   max-width: 250px;
 }
 
 main .card-body {
    border: 1px solid var(--gris-claro);
    padding: 15px;
+
+   position: relative;
 }
 
 main .caja-icono {
    border: 1px solid var(--verde);
    width: fit-content;
    border-radius: 50%;
-   padding: 0.7rem;
+   padding: 0.5rem;
+   background-color: #fff;
+
+   position: absolute;
+   right: 1rem;
+   top: -20%;
 }
 
 main article i {
@@ -97,20 +151,27 @@ main article i {
    color: var(--verde);
 }
 
+main .precio-descuento-contenedor {
+   display: flex;
+}
+
 main article .precio {
    margin: 0;
-   /* font-weight: 600; */
+   width: 40%;
    font-size: 1rem;
 }
 main article .descuento {
    margin: 0;
+   width: 60%;
    font-size: 1rem;
    color: var(--verde);
 }
+
 main h4 {
    font-weight: 400;
    margin-bottom: 0;
    font-size: 1rem;
+   color: var(--gris-oscuro);
 }
 
 footer {
@@ -167,4 +228,31 @@ section.copyright p {
    }
 }
 @media screen and (min-width: 769px) {
+   header .logo-barra-busqueda-contenedor {
+      width: 90%;
+      max-width: 1024px;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+   }
+   .logo-principal {
+      width: 30%;
+   }
+   .barra-busqueda {
+      width: 30%;
+   }
+   .coutas-p {
+      width: 30%;
+   }
+
+   header nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 7%;
+      margin: 1rem 0;
+   }
+
+   header nav ul {
+      display: flex;
+      gap: 1rem;
+   }
 }
