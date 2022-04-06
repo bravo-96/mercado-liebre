@@ -48,7 +48,7 @@ img {
 
 header {
    background-color: var(--amarillo);
-   padding: 1rem 0 0;
+   padding: 1rem 0 0.1px;
 }
 
 header .logo-barra-busqueda-contenedor {
@@ -75,11 +75,10 @@ header nav {
 }
 
 .barra-busqueda input {
-   padding: 0.3rem;
    width: 80%;
 }
 .barra-busqueda button {
-   width: 20%;
+   padding: 0;
 }
 
 .coutas-p {
@@ -100,8 +99,8 @@ header nav {
    font-size: 1.5rem;
 }
 
-header > img {
-   display: block;
+.banner {
+   display: none;
 }
 
 main {
@@ -123,8 +122,6 @@ main > section h3 {
 main article.card {
    margin-bottom: 10px;
    background-color: #fff;
-
-   max-width: 250px;
 }
 
 main .card-body {
@@ -157,12 +154,12 @@ main .precio-descuento-contenedor {
 
 main article .precio {
    margin: 0;
-   width: 40%;
+   width: 30%;
    font-size: 1rem;
 }
 main article .descuento {
    margin: 0;
-   width: 60%;
+   width: 70%;
    font-size: 1rem;
    color: var(--verde);
 }
@@ -215,19 +212,6 @@ section.copyright p {
 }
 
 @media screen and (min-width: 361px) {
-   header nav {
-      display: block;
-   }
-
-   header .burger-menu {
-      display: none;
-   }
-
-   main article.card {
-      box-shadow: 0 0 10px rgb(100, 100, 100);
-   }
-}
-@media screen and (min-width: 769px) {
    header .logo-barra-busqueda-contenedor {
       width: 90%;
       max-width: 1024px;
@@ -247,12 +231,38 @@ section.copyright p {
    header nav {
       display: flex;
       justify-content: space-between;
-      padding: 0 7%;
-      margin: 1rem 0;
+      margin: 0.5rem 0;
    }
 
    header nav ul {
       display: flex;
-      gap: 1rem;
+      justify-content: space-between;
+      width: 50%;
+   }
+
+   header .burger-menu {
+      display: none;
+   }
+
+   .banner {
+      display: block;
+   }
+
+   main article.card {
+      box-shadow: 0 0 10px rgb(100, 100, 100);
+      width: 47%;
+   }
+}
+@media screen and (min-width: 769px) {
+   header nav {
+      padding: 0 1rem;
+   }
+
+   header nav ul {
+      width: 35%;
+   }
+
+   main article.card {
+      width: 23%;
    }
 }
